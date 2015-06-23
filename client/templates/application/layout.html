@@ -1,0 +1,12 @@
+<template name='layout'>	<!--it renders what's inside HTML body tag-->
+<div class='container'>
+	{{>header}}
+	{{>errors}}
+	<div id='main' class='row-fluid'>
+ <!--iron router helper to render body template whichever the router points to -->
+      
+		 {{>yield}}    
+	</div>
+</div>
+</template>
+

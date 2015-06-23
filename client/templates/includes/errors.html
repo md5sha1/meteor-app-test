@@ -1,0 +1,17 @@
+<template name='errors'>
+	<div class= 'errors'>
+		{{#each errors}} 	<!--passes errors from the Error COllection; error.js -->
+			{{>error}}
+		{{/each}}
+	</div>
+</template>
+
+<template name='error'>
+	<div class= 'alert alert-danger' role= 'alert'>
+		{{message}}		<!--this has ref to returned error data from Error coll-->
+ 		<button type='button' class='close' data-dismiss='alert'>&times;</button>
+<!--throws in this div, then dismisses the data-class by a setTimeout-->
+	</div>
+</template>
+
+

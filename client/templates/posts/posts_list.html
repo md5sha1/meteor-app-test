@@ -1,0 +1,16 @@
+<template name='postsList'>
+	<div class='posts page'>
+		<div class='wrapper'>
+		{{#each posts}}  	
+			{{> postItem}}
+		{{/each}}
+		</div>
+	<!--if posts list controller's returned nextPath hasMore is true then return postsLimit+inc on click of <a> nextPath-->
+		{{#if nextPath}}
+		<a href='{{nextPath}}' class='load-more'>Load More</a>
+		{{/if}}
+<!--the route to LoadMore shows as long as nextPath's returned data context remains true--> 
+	</div>
+</template>
+
+<!--we get the posts and nextPath data context from the postListController route-->
